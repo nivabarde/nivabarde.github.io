@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LaunchPad | E-Cell</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Body background */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #111 20%, rgba(74, 0, 130, 0.95) 100%);
+      color: #222;
+    }
+
+    /* Inline style for social icons - ideally put these in style.css */
+    .social-links {
+      margin-top: 15px;
+    }
+    .social-links a {
+      margin: 0 12px;
+      text-decoration: none;
+      font-size: 24px;
+      color: #ddd;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #a855f7; /* Purple hover */
+    }
+
+    /* Centered image styles */
+    .header-logo {
+      display: block;
+      margin: 20px auto;
+      max-width: 200px;
+      height: auto;
+    }
+
+    /* Footer styles */
+    footer {
+      background: linear-gradient(135deg, #222 20%, #6a0dad 100%);
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    /* Optional: white background for form & sections so text is easy to read */
+    section {
+      background: rgba(255, 255, 255, 0.85);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">LaunchPad</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#register">Register Startup</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Welcome to LaunchPad</h1>
+    <p>
+      Empowering student startups. Join the LaunchPad community and accelerate
+      your entrepreneurial journey. The 2nd largest Entrepreneurial Summit
+    </p>
+    <!-- Added centered logo image -->
+    <img src="launch pad image.png" alt="LaunchPad Logo" class="header-logo" />
+    <a href="#register" class="cta-btn">Register Your Startup</a>
+  </header>
+
+  <section id="about">
+    <h2>About LaunchPad</h2>
+    <p>
+      LaunchPad is an initiative by E-Cell BITS Hyderabad to help student founders
+      connect, grow, and showcase their ventures.
+    </p>
+  </section>
+
+  <section id="register">
+    <h2>Startup Registration</h2>
+    <form id="startupForm" method="POST" action="register.php">
+      <input type="text" name="startup_name" placeholder="Startup Name" required />
+      <input type="text" name="founders_name" placeholder="Founder(s) Name" required />
+      <input type="email" name="contact_email" placeholder="Contact Email" required />
+      <input type="text" name="contact_phone" placeholder="Contact Phone" />
+      <textarea name="problem_statement" placeholder="Problem Statement" required></textarea>
+      <textarea name="product_description" placeholder="Product / Service Description" required></textarea>
+      <select name="current_stage" required>
+        <option value="">Current Stage</option>
+        <option value="Idea">Idea</option>
+        <option value="Prototype">Prototype</option>
+        <option value="Early Revenue">Early Revenue</option>
+        <option value="Growth">Growth</option>
+      </select>
+      <input type="url" name="website" placeholder="Website / Social Media (optional)" />
+      <button type="submit">Submit</button>
+    </form>
+    <div id="form-message"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LaunchPad | E-Cell BITS Hyderabad</p>
+    <div class="social-links" aria-label="Social media links">
+      <a href="https://www.instagram.com/ecell_bphc/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://x.com/ecell_bphc?t=1KAgGwoLWyXLe5-li71adA&s=08" target="_blank" rel="noopener" aria-label="X (Twitter)">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/company/e-cell-bphc/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
